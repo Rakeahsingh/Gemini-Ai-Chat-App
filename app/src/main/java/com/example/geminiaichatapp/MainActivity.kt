@@ -63,7 +63,7 @@ import kotlinx.coroutines.flow.update
 class MainActivity : ComponentActivity() {
 
     private val uriState = MutableStateFlow("")
-    val imagePicker =
+    private val imagePicker =
         registerForActivityResult<PickVisualMediaRequest, Uri>(
             ActivityResultContracts.PickVisualMedia()
         ){ uri ->
@@ -144,7 +144,7 @@ class MainActivity : ComponentActivity() {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 16.dp),
+                    .padding(start = 4.dp, end = 4.dp, bottom = 16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
 
@@ -204,6 +204,7 @@ class MainActivity : ComponentActivity() {
                         .size(40.dp)
                         .clickable {
                             viewModel.onEvent(ChatEvent.SendChat(state.prompt, bitmap))
+                            uriState.update { "" }
                         }
                 )
 

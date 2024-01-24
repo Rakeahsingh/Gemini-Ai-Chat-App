@@ -9,7 +9,7 @@ import com.google.ai.client.generativeai.type.content
 
 object GeminiChatData {
 
-    private const val api_Key = "AIzaSyCVFyMujiT9PnVdCuis6BWN1R2cDOSIcBo"
+    private const val api_Key = "Enter Your Api Key"
 
     suspend fun getResponse(prompt: String): ChatModel {
 

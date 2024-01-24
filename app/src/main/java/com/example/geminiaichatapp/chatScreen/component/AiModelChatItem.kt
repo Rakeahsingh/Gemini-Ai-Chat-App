@@ -29,9 +29,10 @@ fun ModelChatItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(10.dp))
-                .background(MaterialTheme.colorScheme.tertiary),
+                .background(MaterialTheme.colorScheme.tertiary)
+                .padding(10.dp),
             color = MaterialTheme.colorScheme.onTertiary,
-            fontSize = 18.sp
+            fontSize = 15.sp
         )
     }
 

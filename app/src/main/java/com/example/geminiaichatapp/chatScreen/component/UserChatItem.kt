@@ -48,9 +48,10 @@ fun UserChatItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(10.dp))
-                .background(MaterialTheme.colorScheme.primary),
+                .background(MaterialTheme.colorScheme.primary)
+                .padding(10.dp),
             color = MaterialTheme.colorScheme.onPrimary,
-            fontSize = 18.sp
+            fontSize = 15.sp
         )
     }
 }
